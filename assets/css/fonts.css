@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'IRANYekan';
+  font-weight: 400;
+  src: 
+       url("/Tapsi/assets/fonts/IRANYekanWebRegular.woff") format('woff');
+}
+@font-face {
+  font-family: 'IRANYekan';
+  font-weight: 700;
+
+  src: 
+       url("/Tapsi/assets/fonts/IRANYekanWebBold.woff") format('woff');
+}
+
+body,button,textarea{
+    font-family: 'IRANYekan';
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/fonts.css" rel="stylesheet" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css
+    "
+      rel="stylesheet"
+    />
+    <title>Accordion</title>
+  </head>
+  <body >
+    <section class="container block ">
+      <h2 class="block-heading">  مزایای تپسی برای رانندگان</h2>
+      <div class="accordion__mobile">
+            
+        <ul class="list  list--tick">
+          <li class="list__item">کسب درآمد روزانه، پایدار و بدون محدودیت</li>
+          <li class="list__item"> تضمین امنیت و پشتیبانی رانندگان</li>
+          <li class="list__item">واریز سهمیه بنزین ویژه رانندگان تپسی</li>
+        </ul>  
+    </div>
+      <div class="accordion-wrapper">
+       
+        <div class="accordion__title">
+          <h3 class="accordion__heading">  مزایا</h3>
+          <div>
+            <span>ویرایش</span>
+          <span><i class="fa fa-edit"></i></span>
+          </div>
+          
+        </div>
+        <div class="accordion">
+          
+          <header class="accordion__header">
+            <h3 class="accordion__heading">کسب درآمد روزانه، پایدار و بدون محدودیت </h3>
+            <span>
+              <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            </span>
+          </header>
+          <div class="accordion__content">
+            <p>
+                ۱. امکان تسویه‌ی اعتبار در هر ساعت از شبانه‌روز<br>
+                ۲. طرح‌های تشویقی، ماموریت‌ها‌، پاداش و اعطای وام‌های قرض‌الحسنه به‌طور دوره‌ای<br>
+                ۳. نمایش مکان‌های پردرخواست در اپلیکیشن و دریافت سفرهای طلایی
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <header class="accordion__header">
+            <h3 class="accordion__heading">تضمین امنیت و پشتیبانی رانندگان </h3>
+            <span>
+              <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            </span>
+          </header>
+          <div class="accordion__content">
+            <p>
+                ۱. پشتیبانی ۲۴ ساعته<br>
+                ۲. امکانات امنیت سفر شامل تماس اضطراری با واحد امنیت و پشتیبانی ۲۴ ساعته تیم امنیت
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <header class="accordion__header">
+            <h3 class="accordion__heading">واریز سهمیه بنزین ویژه رانندگان تپسی </h3>
+            <span>
+              <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            </span>
+          </header>
+          <div class="accordion__content">
+            <p>
+                ۱. نمایش میزان پیمایش ماهانه درون اپلیکیشن<br>
+                ۲. محاسبه‌ی مسافت طی شده تا مسافر در پیمایش
+                        </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const accordionHeaders = document.querySelectorAll(".accordion__header");
+      const accordion = document.querySelector(".accordion");
+      accordionHeaders.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          console.log(e.target.parentElement);
+          e.target.parentElement.classList.toggle("accordion__expanded");
+        });
+      });
+    </script>
+  </body>
+</html>

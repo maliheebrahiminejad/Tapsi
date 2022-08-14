@@ -1,0 +1,12 @@
+<div class="icon-holder">
+          <span class="icon-holder__label">
+            willie.jennings@example.com
+          </span>
+          <span class="icon-container">
+            <svg class="icon">
+              <use
+                xlink:href="/Tapsi/assets/images/icon-svg-splite.svg#Message"
+              ></use>
+            </svg>
+          </span>
+</div>

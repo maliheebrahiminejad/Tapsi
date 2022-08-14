@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100Vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 600px;
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+}
+.element{
+    padding: 10px;
+    background: crimson;
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.element .question{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.question h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 17px;
+    text-align: center;
+}
+.question button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.question i{
+    color: white;
+    font-size: 20px;
+}
+.element .answer{
+    padding: 10px 20px;
+    animation: animate .7s;
+}
+p{
+    font-family: sans-serif;
+}
+.hideText{
+    display: none;
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+      
+        <div class="element">
+            <div class="question">
+                <h3>dolor sit amet consectetur adipisicing elit. Alias, reiciendis ?</h3>
+                <button><i class="fas fa-plus-circle"></i></button>
+            </div>
+            <div class="answer hideText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae fugiat 
+                   debitis voluptatibus in, rem nihil itaque deserunt facere porro laborum.</p>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="question">
+                <h3>dolor sit amet consectetur adipisicing elit. Alias, reiciendis ?</h3>
+                <button><i class="fas fa-plus-circle"></i></button>
+            </div>
+            <div class="answer hideText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae fugiat 
+                   debitis voluptatibus in, rem nihil itaque deserunt facere porro laborum.</p>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="question">
+                <h3>dolor sit amet consectetur adipisicing elit. Alias, reiciendis ?</h3>
+                <button><i class="fas fa-plus-circle"></i></button>
+            </div>
+            <div class="answer hideText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae fugiat 
+                   debitis voluptatibus in, rem nihil itaque deserunt facere porro laborum.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        
+const elements = document.querySelectorAll('.element');
+
+elements.forEach(element =>{
+    let btn = element.querySelector('.question button');
+    let icon = element.querySelector('.question button i');
+    var answer = element.lastElementChild;
+    var answers = document.querySelectorAll('.element .answer');
+    
+    btn.addEventListener('click', ()=>{
+        answers.forEach(ans =>{
+            let ansIcon = ans.parentElement.querySelector('button i');
+            if(answer !== ans){
+                ans.classList.add('hideText');
+                ansIcon.className = 'fas fa-plus-circle';
+            }
+        });
+        
+        answer.classList.toggle('hideText');
+        icon.className === 'fas fa-plus-circle' ? icon.className = 'fas fa-minus-circle' 
+        : icon.className ='fas fa-plus-circle';
+    });
+});
+    </script>
+</body>
+</html>
