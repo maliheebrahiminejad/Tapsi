@@ -146,7 +146,7 @@ border: 2px solid var(--color-primary);
     } */
     .list--tick .list__item{
       
-      background:url(/Tapsi/assets/images/check\ 1.svg) no-repeat right center;
+      background:url(../images/check\ 1.svg) no-repeat right center;
       padding-right: 3rem;
       margin-bottom: 1.5rem;
 

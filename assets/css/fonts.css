@@ -2,14 +2,14 @@
   font-family: 'IRANYekan';
   font-weight: 400;
   src: 
-       url("/assets/fonts/IRANYekanWebRegular.woff") format('woff');
+       url("../fonts/IRANYekanWebRegular.woff") format('woff');
 }
 @font-face {
   font-family: 'IRANYekan';
   font-weight: 700;
 
   src: 
-       url("/assets/fonts/IRANYekanWebBold.woff") format('woff');
+       url("../fonts/IRANYekanWebBold.woff") format('woff');
 }
 
 body,button,textarea{
