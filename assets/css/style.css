@@ -548,16 +548,17 @@ justify-content: stretch;
   text-decoration: none;
   cursor: pointer;
 }
-
+body{
+  margin-top: 60px;
+}
 .main-header{
-  height: 60px;
   width: 100%;
   background-color:var(--color-navbar) ;
   border-bottom: 1px solid #ddd;
   padding: 1.5rem 2rem;
   position: fixed;
-  top:0px;
-z-index: 2;
+  top:0;
+z-index: 1000;
   }
 .main-header a{ color: #545454;}
 .nav{
@@ -566,10 +567,12 @@ z-index: 2;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
- 
+  background-color:var(--color-navbar) ;
+
 }
  
 .nav__list{
+
   width: 100%; 
   font-size: 1.4rem;
   display: flex;
@@ -594,6 +597,7 @@ z-index: 2;
   opacity: 1;
 
 }
+
 .call-to-action {
   margin: 0px;
   color: var(--color-white) !important;
@@ -607,13 +611,15 @@ z-index: 2;
            display: none;
       }
    .nav__list { 
-opacity: 1;        width: auto; 
+opacity: 1;      
+  width: auto; 
         font-size: 1.5rem;
         flex-direction: row-reverse;
         /* background-color: var(--color-navbar);   */
         justify-content: space-between;
         /* for toggler click */
-        /*  SAHEB NEVESHTEH opacity: 1;*/
+        /*  SAHEB NEVESHTEH ;*/
+        opacity: 1;
         max-height: 100%; 
       }
   .nav__list .list__item{    
